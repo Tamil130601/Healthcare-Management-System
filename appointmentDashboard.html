@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Appointment Dashboard" icon-name="standard:event">
+        <div class="slds-grid slds-wrap slds-gutters slds-p-around_medium">
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+            <div class="slds-box slds-theme_default slds-text-align_center">
+                <h2>Today Appointment</h2>
+                <p class="slds-text-heading_large">{todayAppointments}</p>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+            <div class="slds-box slds-theme_default slds-text-align_center">
+                <h2>Pending Appointments</h2>
+                <p class="slds-text-heading_large">{pendingAppointments}</p>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+            <div class="slds-box slds-theme_default slds-text-align_center">
+                <h2>Total Appointments</h2>
+                <p class="slds-text-heading_large">{totalAppointments}</p>
+            </div>
+        </div>
+</div>
+    </lightning-card>
+</template>

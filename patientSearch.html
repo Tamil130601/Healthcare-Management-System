@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="patientSearch" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="patient Name or phone"
+                placeholder="Enter patient name or phone number"
+                value={searchKey}
+                onchange={handleSearchKeyChange}>
+        </lightning-input>
+
+        <div class="slds-m-top_medium">
+            <lightning-button 
+              variant="brand"
+              label="Search" 
+              onclick={handleSearch}>
+        </lightning-button>
+        </div>
+        </div>
+
+        <template if:true={patients.length}>
+            <div class="slds-p-around_medium">
+                <lightning-datatable
+                  key-field="Id"
+                  data={patients}
+                  columns={columns}
+                  hide-checkbox-column>
+                </lightning-datatable>  
+            </div>
+        </template>
+
+        <template if:true={noRecords}>
+            <div class="slds-p-around_medium">
+                No patient records found.
+            </div>
+        </template>
+    </lightning-card>
+</template>
+
+
+
+
+
+
